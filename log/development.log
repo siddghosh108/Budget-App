@@ -1405,3 +1405,26 @@ Processing by SplashesController#index as TURBO_STREAM
 Completed 200 OK in 308ms (Views: 294.5ms | ActiveRecord: 0.0ms | Allocations: 35725)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-16 10:17:12 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 404)
+  [1m[36mGroup Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:10
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1 ORDER BY id DESC[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:11
+  [1m[36mEntity Load (39.6ms)[0m  [1m[34mSELECT "entities".* FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/helpers/groups_helper.rb:3:in `reduce'
+  Rendered groups/_group.html.erb (Duration: 64.9ms | Allocations: 3051)
+  [1m[36mEntity Load (0.5ms)[0m  [1m[34mSELECT "entities".* FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/helpers/groups_helper.rb:3:in `reduce'
+  Rendered groups/_group.html.erb (Duration: 73.7ms | Allocations: 3420)
+  Rendered shared/_footer.html.erb (Duration: 1.8ms | Allocations: 176)
+  Rendered groups/index.html.erb within layouts/application (Duration: 176.0ms | Allocations: 12311)
+  Rendered layout layouts/application.html.erb (Duration: 500.0ms | Allocations: 44922)
+Completed 200 OK in 605ms (Views: 450.7ms | ActiveRecord: 65.8ms | Allocations: 53873)
+
+
