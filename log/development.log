@@ -1010,5 +1010,3 @@ Processing by GroupsController#show as HTML
   Rendered groups/show.html.erb within layouts/application (Duration: 25.8ms | Allocations: 2983)
   Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 4273)
 Completed 200 OK in 77ms (Views: 21.6ms | ActiveRecord: 34.2ms | Allocations: 7222)
-
-
