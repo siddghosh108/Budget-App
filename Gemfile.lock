@@ -136,7 +136,17 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
+    nokogiri (1.16.0-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86-linux)
+      racc (~> 1.4)
     nokogiri (1.16.0-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.4)
@@ -251,7 +261,12 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  x86_64-darwin-21
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -275,7 +290,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.0p0
+   ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.22
+   2.5.4
