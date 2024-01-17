@@ -1,21 +1,21 @@
 databases:
-  - name: Budget-App
+  - name: budget-app
     databaseName: budget_app_wrtw
     user: budget_app_wrtw_user
     plan: free
 
 services:
   - type: web
-    name: Sidds-Budget-App
+    name: budget-app
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
-    startCommand: "./bin/rails server"
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: Sidds-Budget-App
+          name: budget-app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
