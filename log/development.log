@@ -1498,3 +1498,13 @@ Processing by SplashesController#index as TURBO_STREAM
 Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2308)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-17 09:36:14 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (42.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SplashesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashes/index.html.erb within layouts/application
+  Rendered splashes/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 721)
+  Rendered layout layouts/application.html.erb (Duration: 654.7ms | Allocations: 81977)
+Completed 200 OK in 798ms (Views: 678.7ms | ActiveRecord: 0.0ms | Allocations: 91481)
+
+
