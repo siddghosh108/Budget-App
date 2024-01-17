@@ -1156,3 +1156,32 @@ Processing by SplashesController#index as HTML
 Completed 200 OK in 859ms (Views: 742.5ms | ActiveRecord: 0.0ms | Allocations: 93584)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-16 21:45:57 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SplashesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashes/index.html.erb within layouts/application
+  Rendered splashes/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 576)
+  Rendered layout layouts/application.html.erb (Duration: 278.4ms | Allocations: 33986)
+Completed 200 OK in 367ms (Views: 296.9ms | ActiveRecord: 0.0ms | Allocations: 39518)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-16 21:46:36 -0800
+Processing by SplashesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashes/index.html.erb within layouts/application
+  Rendered splashes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 1356)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 1619)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-16 21:46:42 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 27.1ms | Allocations: 717)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 111.1ms | Allocations: 2953)
+  Rendered layout layouts/application.html.erb (Duration: 127.1ms | Allocations: 4289)
+Completed 200 OK in 498ms (Views: 146.5ms | ActiveRecord: 28.8ms | Allocations: 11855)
+
+
